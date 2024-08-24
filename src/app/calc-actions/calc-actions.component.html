@@ -1,1 +1,27 @@
-<p>calc-actions works!</p>
+<div class="calculator">
+    <div class="input-group">
+      <label for="valor1">Valor 1</label>
+      <input type="number" id="valor1" placeholder="Ingrese el primer valor" [(ngModel)]="valor1">
+    </div>
+    
+    <div class="input-group">
+      <label for="valor2">Valor 2</label>
+      <input type="number" id="valor2" placeholder="Ingrese el segundo valor" [(ngModel)]="valor2">
+    </div>
+    
+    <div class="result-group">
+      <label for="resultado">Resultado</label>
+      <input type="text" id="resultado" [value]="resultado" readonly>
+    </div>
+  
+    <div class="button-group">
+      <button (click)="operar('suma', valor1, valor2)">+</button>
+      <button (click)="operar('resta', valor1, valor2)">-</button>
+      <button (click)="operar('multiplicacion', valor1, valor2)">x</button>
+      <button (click)="operar('division', valor1, valor2)">÷</button>
+      <button (click)="operar('potencia', valor1, valor2)">^</button>
+      <button (click)="operar('raiz', valor1, valor2)">√</button>
+      <button (click)="clear()">CE</button>
+    </div>
+  </div>
+  

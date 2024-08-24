@@ -1,1 +1,4 @@
-<app-calc-view></app-calc-view>
+
+  <app-calc-actions (resultadoEvent)="actualizarResult($event)"></app-calc-actions>
+  
+  <app-calc-view [resultado]="resultado"></app-calc-view>
